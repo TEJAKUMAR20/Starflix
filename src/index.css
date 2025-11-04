@@ -1,0 +1,159 @@
+/* 🌑 Base Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0b1120; /* Dark Theme Background */
+  color: #fff; /* Text Color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 🌐 Universal Reset & Layout Fixes */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* 🧩 Cursor + Focus Fix */
+*:focus {
+  outline: none !important;
+}
+
+/* Hide caret everywhere except inside inputs & textareas */
+:not(input):not(textarea):focus {
+  caret-color: transparent !important;
+}
+
+/* Optional: disable accidental text selection (prevents ghost cursor focus) */
+body, * {
+  user-select: none;
+}
+
+/* 🎨 Buttons */
+button, .btn {
+  transition: all 0.3s ease;
+}
+
+.btn-info {
+  background-color: #00aaff !important;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #0088cc !important;
+}
+
+/* 🧭 Links */
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00cfff;
+  text-decoration: underline;
+}
+
+/* 🖼️ Images & Hover Animations */
+img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* 🎞️ Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+}
+
+/* 🎬 Modal Backdrop Blur Effect */
+.modal-backdrop.show {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 🎥 Movie Cards Hover Overlay */
+.movie-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-card:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.05);
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+/* 🧱 Container Width Fix */
+.container {
+  max-width: 1300px !important;
+}
+
+/* 🧭 Scrollbar (Dark Theme) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00aaff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0088cc;
+}
+
+/* ✨ Optional Glow Effect for Buttons */
+.btn-info, .read-more {
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+.btn-info:hover, .read-more:hover {
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.7);
+}
